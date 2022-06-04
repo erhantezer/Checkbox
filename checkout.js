@@ -14,7 +14,9 @@ window.addEventListener("load", () => {
 let productsDiv = document.querySelector(".products");
 productsDiv.addEventListener("click", (e) => {
     //console.log(event.target);
-    //minus buttons
+
+    //!============  Minus Buttons ===================
+
     if (e.target.classList.contains("minus")) {
         // console.log("minusBtn clicked");
         if (e.target.nextElementSibling.innerText > 1) {
@@ -33,7 +35,7 @@ productsDiv.addEventListener("click", (e) => {
         }
     }
 
-    //plus buttons
+    //!====================== Plus Buttons  =======================
     else if (e.target.className == "plus") {
         // console.log("plusBtn clicked");
         // e.target.parentElement.firstElementChild.innerText;
@@ -42,7 +44,7 @@ productsDiv.addEventListener("click", (e) => {
         calculateProductAndCartTotal(e.target.parentElement.parentElement);
     }
 
-    //remove buttons
+    //!===========================  Remove Buttons  ================
     else if (e.target.className == "remove-product") {
         // console.log("removeBtn clicked");
         if (confirm("Product will be removed")) {
